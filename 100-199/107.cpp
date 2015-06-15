@@ -35,13 +35,14 @@ int main()
 	int N;
 	cin >> N;
 
-	int res = 8;
-
-	if(N < 8) res = 0;
-	else
-		while(--N >= 8)
-			res *= 9;
-	cout << res;
+	if(N <= 8) cout << 0;
+	else if(N == 9) cout << 8;
+	else {
+		cout << 72;
+		string str(N-10,'0');
+		cout << str;
+	}	
+	
 
 	return 0;
 }
